@@ -18,8 +18,6 @@ def get_datetime(message: str) -> datetime:
 def get_chat_threads(file_path: str = CHAT_PATH,
                      max_chat_interval: timedelta = MAX_CHAT_INTERVAL,
                      min_chat_messages: int = MIN_CHAT_MESSAGES) -> Generator[list[str], None, None]:
-	threads = list()
-
 	with open(file_path, 'r', encoding='utf-8') as messages:
 		thread = list()
 
